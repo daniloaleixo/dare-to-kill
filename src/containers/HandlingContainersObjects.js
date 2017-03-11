@@ -1,5 +1,4 @@
 import React from 'react'
-import { random }  from '../helpers/helpers'
 import ContainerObject from '../components/ContainerObject'
 
 const style = {
@@ -8,7 +7,7 @@ const style = {
 	justifyContent:'center'
 }
 
-const NUM_CONTAINERS = 11, INTERVAL_MS = 200;
+const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
 
 export default React.createClass({
 	getInitialState() {
@@ -26,39 +25,41 @@ export default React.createClass({
 
 	intervals: [],
 	intervalCounter: 0,
-	last_container:-1,
 
 	handleIntervals(ms) {
 	   	this.intervals.push(setInterval(function(){
-	   		let containerChosen = -1
 
 
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
 
-	     	//Each second I generate another container to be hit
-	     	if(this.intervalCounter === 0){	     		
-				containerChosen = random(0, NUM_CONTAINERS);
-
-	     		//Choose a container different then the last one
-	     		while(containerChosen === this.last_container) 
-	     			containerChosen = random(0, NUM_CONTAINERS);
-
-	     		this.last_container = containerChosen
-		     	const prevContainersState = this.state.containersState
-		     	prevContainersState[containerChosen].stateName = 'up'
+	     	// Put everyone up
+	     	if(this.intervalCounter === 0){
+				const prevContainersState = this.state.containersState
+				prevContainersState.forEach((currentContainer) => {
+					currentContainer.stateName = 'up'
+					})
 		     	this.setState({prevContainersState})
 	     	}
 
-	     	//When I wait 0.8s the Container come back to normal
+	     	// Put everyone down
 	     	if(this.intervalCounter === 8){
 		     	const prevContainersState = this.state.containersState
-		     	if(this.last_container >= 0) prevContainersState[this.last_container].stateName = 'down'
+				prevContainersState.forEach((currentContainer) => {
+					currentContainer.stateName = 'down'
+					})
 		     	this.setState({prevContainersState})
 	     	}
 
 	   	}.bind(this), ms));
-	   	console.log(this.intervals);
+	},
+
+	verifyEndGame(){
+		const currentContainersState = this.state.containersState
+		for(let i = 0; i < currentContainersState.length; i++)
+			if(currentContainersState[i].stateName !== 'clicked')
+				return false;
+		return true;
 	},
 
 	// Just change the state to 'clicked'
@@ -67,8 +68,11 @@ export default React.createClass({
 		if(prevContainersState[index].stateName === 'up'){
 			prevContainersState[index].stateName = 'clicked'
 			this.setState({prevContainersState})
+			console.log(this.verifyEndGame())
 		}
 	},
+
+
 	render(){
 		return (
 			<div style={style}>
