@@ -5,10 +5,10 @@ import ContainerObject from '../components/ContainerObject'
 const style = {
 	display: 'flex',
 	flexWrap: 'wrap',
-	justifyContent:'space-between'
+	justifyContent:'center'
 }
 
-const NUM_CONTAINERS = 10, INTERVAL_MS = 200;
+const NUM_CONTAINERS = 11, INTERVAL_MS = 200;
 
 export default React.createClass({
 	getInitialState() {
@@ -71,7 +71,20 @@ export default React.createClass({
 		return (
 			<div style={style}>
 				{
-					this.state.containersState.map( (containerState) => {
+					this.state.containersState.slice(0,NUM_CONTAINERS/2 + 1)
+					.map( (containerState) => {
+					return (
+						<ContainerObject 
+							stateName={containerState.stateName}
+							index={containerState.index}
+							onClick={this.handleClick}/>
+						)
+					} )
+				}
+				<br/>
+				{
+					this.state.containersState.slice(NUM_CONTAINERS/2 + 1,NUM_CONTAINERS)
+					.map( (containerState) => {
 					return (
 						<ContainerObject 
 							stateName={containerState.stateName}
