@@ -21,7 +21,15 @@ export default React.createClass({
 	},
 
 	render() {
-		const newStyle = {...containerStyle, background: this.props.stateName === 'a' ? 'red' : 'green'}
+		let backgroundColor = ''
+
+		switch(this.props.stateName){
+			case 'a': backgroundColor = 'red'; break;
+			case 'b': backgroundColor = 'green'; break;
+			case 'c': backgroundColor = 'blue'; break;
+			default: backgroundColor = 'black'
+		}
+		const newStyle = {...containerStyle, background: backgroundColor}
 		return (
 			<div style={newStyle} 
 				onClick={this.handleClick}>
