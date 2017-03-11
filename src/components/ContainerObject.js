@@ -24,9 +24,9 @@ export default React.createClass({
 		let backgroundColor = ''
 
 		switch(this.props.stateName){
-			case 'a': backgroundColor = 'red'; break;
-			case 'b': backgroundColor = 'green'; break;
-			case 'c': backgroundColor = 'blue'; break;
+			case 'down': backgroundColor = 'red'; break;
+			case 'up': backgroundColor = 'green'; break;
+			case 'clicked': backgroundColor = 'blue'; break;
 			default: backgroundColor = 'black'
 		}
 		const newStyle = {...containerStyle, background: backgroundColor}

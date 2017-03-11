@@ -17,7 +17,7 @@ export default React.createClass({
 		{
 			containersStateAux.push({
 				index: i,
-				stateName: 'a'
+				stateName: 'down'
 			})
 		}
 		this.handleIntervals(INTERVAL_MS)
@@ -46,24 +46,26 @@ export default React.createClass({
 
 	     		this.last_container = containerChosen
 		     	const prevContainersState = this.state.containersState
-		     	prevContainersState[containerChosen].stateName = 'b'
+		     	prevContainersState[containerChosen].stateName = 'up'
 		     	this.setState({prevContainersState})
 	     	}
 
 	     	//When I wait 0.8s the Container come back to normal
 	     	if(this.intervalCounter === 8){
 		     	const prevContainersState = this.state.containersState
-		     	if(this.last_container >= 0) prevContainersState[this.last_container].stateName = 'a'
+		     	if(this.last_container >= 0) prevContainersState[this.last_container].stateName = 'down'
 		     	this.setState({prevContainersState})
 	     	}
 
 	   	}.bind(this), ms));
 	   	console.log(this.intervals);
-	 },
+	},
+
+	// Just change the state to 'clicked'
 	handleClick(index){
 		const prevContainersState = this.state.containersState;
-		if(prevContainersState[index].stateName === 'b'){
-			prevContainersState[index].stateName = 'c'
+		if(prevContainersState[index].stateName === 'up'){
+			prevContainersState[index].stateName = 'clicked'
 			this.setState({prevContainersState})
 		}
 	},
