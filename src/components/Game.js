@@ -34,7 +34,7 @@ export default React.createClass({
 			<div style={gameStyle}>
 				<div className='bgImage'>
 					<div className='title-box'>
-						<h1 className='title'>Dare to kill my app</h1>
+						<h1>Dare to kill my app</h1>
 						{this.gameComponent}
 					</div>
 					<div className='logoFooter'>
@@ -48,7 +48,10 @@ export default React.createClass({
 	checkButtonOrGame(){
 		switch(this.state.game){
 			case 'welcome':
-				this.gameComponent = <button onClick={this.handleGameState}>Start Game</button>
+				this.gameComponent = (<button className='button' 
+									onClick={this.handleGameState}>
+										Start Game
+									</button>)
 				break
 			case 'play':
 				this.gameComponent = <HandlingContainersObjects numContainers={this.numContainers} 
@@ -66,7 +69,7 @@ export default React.createClass({
 				this.gameComponent = (
 					<div>
 						<h2>Instructions</h2>
-						<button onClick={this.handleGameState}>Play</button>
+						<button className='button' onClick={this.handleGameState}>Play</button>
 					</div>
 					)
 				break

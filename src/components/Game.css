@@ -14,8 +14,41 @@
 	text-align: center;
 }
 
-.title-box .title {
+h1 {
 	color: white;
+	font-family: Nunito, Verdana;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 36px;
+	line-height: 28px;
+	text-transform: uppercase;
+	opacity: 0.9;
+}
+
+.button {
+	background-color: #ff4c4d;
+	color: #ffffff;
+	padding-top: 1.818em;
+	padding-right: 2.727em;
+	padding-bottom: 1.818em;
+	padding-left: 2.727em;
+	margin: 0px;
+	display: inline-block;
+	border: 3px solid transparent;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100%;
+	border-radius: 50px;
+	font-family: Nunito, Verdana;
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	bottom: 10%;
+	/*-webkit-transition : color .3s ease, background-color .3s ease, border-color .3s ease;
+	-moz-transition    : color .3s ease, background-color .3s ease, border-color .3s ease;
+	-o-transition      : color .3s ease, background-color .3s ease, border-color .3s ease;
+	-ms-transition     : color .3s ease, background-color .3s ease, border-color .3s ease;
+	transition         : color .3s ease, background-color .3s ease, border-color .3s ease;*/
 }
 
 .logoFooter {
