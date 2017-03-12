@@ -10,8 +10,12 @@
 
 .title-box {
 	margin: auto;
-	padding-top: 10em;
+	padding-top: 7em;
 	text-align: center;
+}
+
+.title-box .title {
+	color: white;
 }
 
 .logoFooter {
