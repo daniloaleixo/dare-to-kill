@@ -38,7 +38,7 @@ export default React.createClass({
 						{this.gameComponent}
 					</div>
 					<div className='logoFooter'>
-						<img src={logo} className='img-logo'/>
+						<img src={logo} alt='Logo' className='img-logo'/>
 					</div>
 				</div>
 			</div>
@@ -48,7 +48,7 @@ export default React.createClass({
 	checkButtonOrGame(){
 		switch(this.state.game){
 			case 'welcome':
-				this.gameComponent = (<button className='button' 
+				this.gameComponent = (<button
 									onClick={this.handleGameState}>
 										Start Game
 									</button>)
@@ -69,7 +69,7 @@ export default React.createClass({
 				this.gameComponent = (
 					<div>
 						<h2>Instructions</h2>
-						<button className='button' onClick={this.handleGameState}>Play</button>
+						<button onClick={this.handleGameState}>Play</button>
 					</div>
 					)
 				break
