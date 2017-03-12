@@ -11,7 +11,7 @@ const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
 
 export default React.createClass({
 	getInitialState() {
-		return { containersState: this.createContainers(NUM_CONTAINERS)}
+		return { containersState: this.createContainers(this.props.numContainers)}
 	},
 
 	intervals: [],
@@ -23,6 +23,8 @@ export default React.createClass({
 
 	handleIntervals(ms) {
 	   	this.intervals.push(setInterval(function(){
+
+	   		console.log(this.intervalCounter)
 
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
@@ -102,9 +104,19 @@ export default React.createClass({
 				break;
 		// Check if the game is over
 		if(i === currentContainersState.length) {
+			this.endGame()
 			this.props.inCaseOfWin()
 		}
 	},
+
+	startGame(){
+		this.intervalCounter = 8
+	},
+
+	endGame(){
+		this.intervals = []
+	},
+
 	createContainers(numContainers){
 		const containersStateAux = []
 		for(let i = 0; i < numContainers; i++)

@@ -7,6 +7,7 @@ export default React.createClass({
 	},
 
 	gameComponent: null,
+	numContainers: 11,
 
 	handleGameState(){
 		// If we're in the welcome screen play the game
@@ -36,7 +37,8 @@ export default React.createClass({
 				this.gameComponent = <button onClick={this.handleGameState}>Start Game</button>
 				break
 			case 'play':
-				this.gameComponent = <HandlingContainersObjects inCaseOfWin={this.handleGameState}/>
+				this.gameComponent = <HandlingContainersObjects numContainers={this.numContainers} 
+										inCaseOfWin={this.handleGameState}/>
 				break
 			case 'won':
 				this.gameComponent = (
