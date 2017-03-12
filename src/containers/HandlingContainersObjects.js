@@ -55,6 +55,7 @@ export default React.createClass({
 			prevContainersState[index].stateName = 'clicked'
 			this.setState({prevContainersState})
 		}
+		this.verifyEndGame()
 	},
 
 
@@ -95,10 +96,14 @@ export default React.createClass({
 	// *************************
 	verifyEndGame(){
 		const currentContainersState = this.state.containersState
-		for(let i = 0; i < currentContainersState.length; i++)
+		let i = 0;
+		for(i = 0; i < currentContainersState.length; i++)
 			if(currentContainersState[i].stateName !== 'clicked')
-				return false;
-		return true;
+				break;
+		// Check if the game is over
+		if(i === currentContainersState.length) {
+			this.props.inCaseOfWin()
+		}
 	},
 	createContainers(numContainers){
 		const containersStateAux = []

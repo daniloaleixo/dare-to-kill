@@ -8,9 +8,13 @@ export default React.createClass({
 
 	gameComponent: null,
 
-	handleClick(){
+	handleGameState(){
 		// If we're in the welcome screen play the game
 		if(this.state.game === 'welcome')
+			this.setState({game: 'play'})
+		else if(this.state.game === 'play')
+			this.setState({game: 'won'})
+		else if(this.state.game === 'won')
 			this.setState({game: 'play'})
 	},
 
@@ -25,9 +29,25 @@ export default React.createClass({
 	},
 
 	checkButtonOrGame(){
-		this.gameComponent = this.state.game === 'welcome' ?  
-			this.gameComponent = <button onClick={this.handleClick}>Start Game</button> : 
-			this.gameComponent = <HandlingContainersObjects/>
+		switch(this.state.game){
+			case 'welcome':
+				this.gameComponent = <button onClick={this.handleGameState}>Start Game</button>
+				break
+			case 'play':
+				this.gameComponent = <HandlingContainersObjects inCaseOfWin={this.handleGameState}/>
+				break
+			case 'won':
+				this.gameComponent = (
+					<div>
+						<h2>Você ganhou</h2>
+						<button onClick={this.handleGameState}>Jogar novamente</button>
+					</div>
+					)
+				break
+			default:
+				break
+		}
+
 
 	}
 })
