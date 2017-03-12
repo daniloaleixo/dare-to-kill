@@ -11,24 +11,19 @@ const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
 
 export default React.createClass({
 	getInitialState() {
-		const containersStateAux = []
-		for(let i = 0; i < NUM_CONTAINERS; i++)
-		{
-			containersStateAux.push({
-				index: i,
-				stateName: 'down'
-			})
-		}
-		this.handleIntervals(INTERVAL_MS)
-		return { containersState: containersStateAux}
+		return { containersState: this.createContainers(NUM_CONTAINERS)}
 	},
 
 	intervals: [],
-	intervalCounter: 0,
+	intervalCounter: 8,
+
+	componentDidMount(){
+		this.handleIntervals(INTERVAL_MS)
+	},
 
 	handleIntervals(ms) {
 	   	this.intervals.push(setInterval(function(){
-
+	   		console.log(this.intervalCounter)
 
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
@@ -52,14 +47,6 @@ export default React.createClass({
 	     	}
 
 	   	}.bind(this), ms));
-	},
-
-	verifyEndGame(){
-		const currentContainersState = this.state.containersState
-		for(let i = 0; i < currentContainersState.length; i++)
-			if(currentContainersState[i].stateName !== 'clicked')
-				return false;
-		return true;
 	},
 
 	// Just change the state to 'clicked'
@@ -101,5 +88,31 @@ export default React.createClass({
 				}
 			</div>
 			)
+	},
+
+	// *************************
+
+	// Auxiliar functions
+
+	// *************************
+	verifyEndGame(){
+		const currentContainersState = this.state.containersState
+		for(let i = 0; i < currentContainersState.length; i++)
+			if(currentContainersState[i].stateName !== 'clicked')
+				return false;
+		return true;
+	},
+	createContainers(numContainers){
+		const containersStateAux = []
+		for(let i = 0; i < numContainers; i++)
+		{
+			containersStateAux.push({
+				index: i,
+				stateName: 'down'
+			})
+		}
+		return containersStateAux
 	}
+
+
 })
