@@ -99,7 +99,6 @@ button:active {
 	background: #ffffff;
 	position: relative;
 	width: 20em;
-	height: 10em;
 	text-align: center;
 }
 
@@ -120,6 +119,7 @@ button:active {
 	font-size: 18px;
 }
 
-.instructions-button {
+.instructions .textbox .button {
 	clear: none;
+	margin-bottom: 20px;
 }

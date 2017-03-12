@@ -1,7 +1,6 @@
 import React from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import logo from '../logo-getup.png'
-import instructionsHelp from '../imgContainers-2_2.png'
 import './Game.css';
 
 const gameStyle = {
@@ -11,7 +10,7 @@ const gameStyle = {
 
 export default React.createClass({
 	getInitialState(){
-		return { game: 'instructions' }
+		return { game: 'welcome' }
 	},
 
 	gameComponent: null,
@@ -78,12 +77,10 @@ export default React.createClass({
 									dhdasd
 									sadassaasbsahdsa
 								</p>
+								<button className='button' 
+									onClick={this.handleGameState}>Play</button>
 							</div>
-							<img src={instructionsHelp} 
-								alt='Instructions' className='image'/>
 						</div>
-						<button className='instructions-button' 
-								onClick={this.handleGameState}>Play</button>
 					</div>
 					)
 				break
