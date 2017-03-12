@@ -98,7 +98,7 @@ button:active {
 	box-sizing: border-box;
 	background: #ffffff;
 	position: relative;
-	width: 20em;
+	width: 100%;
 	text-align: center;
 }
 
