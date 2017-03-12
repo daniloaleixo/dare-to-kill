@@ -1,6 +1,7 @@
 import React from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import logo from '../logo-getup.png'
+import instructionsHelp from '../imgContainers-2_2.png'
 import './Game.css';
 
 const gameStyle = {
@@ -10,7 +11,7 @@ const gameStyle = {
 
 export default React.createClass({
 	getInitialState(){
-		return { game: 'welcome' }
+		return { game: 'instructions' }
 	},
 
 	gameComponent: null,
@@ -68,8 +69,21 @@ export default React.createClass({
 			case 'instructions':
 				this.gameComponent = (
 					<div>
-						<h2>Instructions</h2>
-						<button onClick={this.handleGameState}>Play</button>
+						<div className='instructions'>
+							<div className='textbox'>
+								<h2 className='title'>Instructions</h2>
+								<p className='text'>
+									You have to dsajkhdad
+									sadjbasdaja
+									dhdasd
+									sadassaasbsahdsa
+								</p>
+							</div>
+							<img src={instructionsHelp} 
+								alt='Instructions' className='image'/>
+						</div>
+						<button className='instructions-button' 
+								onClick={this.handleGameState}>Play</button>
 					</div>
 					)
 				break

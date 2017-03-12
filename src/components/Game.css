@@ -10,7 +10,7 @@
 
 .title-box {
 	margin: auto;
-	padding-top: 7em;
+	padding-top: 4em;
 	text-align: center;
 }
 
@@ -19,9 +19,20 @@ h1 {
 	font-family: Nunito, Verdana;
 	font-weight: 300;
 	font-style: normal;
-	font-size: 36px;
+	font-size: 32px;
 	line-height: 28px;
 	text-transform: uppercase;
+	opacity: 0.9;
+	margin-bottom: 10%;
+}
+
+h2 {
+	color: white;
+	font-family: Nunito, Verdana;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 28px;
 	opacity: 0.9;
 }
 
@@ -65,4 +76,47 @@ button:active {
 	max-width: 100px;
 	bottom: 1%;
 	right: 3%
+}
+
+.instructions {
+	position: relative;
+	text-align: center;
+}
+
+.instructions .image {
+	position: relative;
+	left: 30%;
+	max-width: 200px;
+}
+
+.instructions .textbox {
+	display: block;
+	margin: auto;
+	box-sizing: border-box;
+	background: #ffffff;
+	position: relative;
+	width: 20em;
+	height: 10em;
+	text-align: center;
+}
+
+.instructions .textbox .title {
+	color: #5b5b5b !important;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.instructions .textbox .text {
+	padding: 10px;
+	word-wrap: break-word;
+	color: #5b5b5b;
+	font-family: Nunito, Verdana;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 18px;
+}
+
+.instructions-button {
+	clear: none;
 }
