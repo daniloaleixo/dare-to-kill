@@ -11,6 +11,8 @@ export default React.createClass({
 	handleGameState(){
 		// If we're in the welcome screen play the game
 		if(this.state.game === 'welcome')
+			this.setState({game: 'instructions'})
+		if(this.state.game === 'instructions')
 			this.setState({game: 'play'})
 		else if(this.state.game === 'play')
 			this.setState({game: 'won'})
@@ -40,7 +42,15 @@ export default React.createClass({
 				this.gameComponent = (
 					<div>
 						<h2>Você ganhou</h2>
-						<button onClick={this.handleGameState}>Jogar novamente</button>
+						<button onClick={this.handleGameState}>Play Again</button>
+					</div>
+					)
+				break
+			case 'instructions':
+				this.gameComponent = (
+					<div>
+						<h2>Instructions</h2>
+						<button onClick={this.handleGameState}>Play</button>
 					</div>
 					)
 				break
