@@ -7,3 +7,20 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+.title-box {
+	margin: auto;
+	padding-top: 10em;
+	text-align: center;
+}
+
+.logoFooter {
+	justify-content:center;
+}
+
+.logoFooter .img-logo {
+	position: absolute;
+	max-width: 100px;
+	bottom: 1%;
+	right: 3%
+}

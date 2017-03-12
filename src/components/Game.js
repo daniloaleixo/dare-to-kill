@@ -1,5 +1,6 @@
 import React from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
+import logo from '../logo-getup.png'
 import './Game.css';
 
 const gameStyle = {
@@ -32,9 +33,13 @@ export default React.createClass({
 		return (
 			<div style={gameStyle}>
 				<div className='bgImage'>
-					<h1>Dare to kill my app</h1>
-					{this.gameComponent}
-				
+					<div className='title-box'>
+						<h1 className='title'>Dare to kill my app</h1>
+						{this.gameComponent}
+					</div>
+					<div className='logoFooter'>
+						<img src={logo} className='img-logo'/>
+					</div>
 				</div>
 			</div>
 			)
