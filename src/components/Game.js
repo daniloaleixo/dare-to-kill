@@ -1,5 +1,11 @@
 import React from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
+import './Game.css';
+
+const gameStyle = {
+	
+}
+
 
 export default React.createClass({
 	getInitialState(){
@@ -24,9 +30,12 @@ export default React.createClass({
 	render(){
 		this.checkButtonOrGame()
 		return (
-			<div>
-				<h1>Dare to kill my app</h1>
-				{this.gameComponent}
+			<div style={gameStyle}>
+				<div className='bgImage'>
+					<h1>Dare to kill my app</h1>
+					{this.gameComponent}
+				
+				</div>
 			</div>
 			)
 	},

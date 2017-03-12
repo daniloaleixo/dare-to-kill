@@ -1,0 +1,9 @@
+.bgImage {
+	background-image: url('../imgHeaderVerde-1-1920x893_2.png');
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: cover;;
+	background-repeat: no-repeat;
+	background-position: center;
+}
