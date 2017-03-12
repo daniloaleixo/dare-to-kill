@@ -1,3 +1,6 @@
+body {
+    overflow-x: hidden !important;
+}
 .bgImage {
 	background-image: url('../imgHeaderVerde-1-1920x893_2.png');
 	position: absolute;
@@ -75,7 +78,7 @@ button:active {
 	position: absolute;
 	max-width: 100px;
 	bottom: 1%;
-	right: 3%
+	right: 1%
 }
 
 .instructions {
