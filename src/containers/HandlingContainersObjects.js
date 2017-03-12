@@ -23,7 +23,6 @@ export default React.createClass({
 
 	handleIntervals(ms) {
 	   	this.intervals.push(setInterval(function(){
-	   		console.log(this.intervalCounter)
 
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
@@ -55,7 +54,6 @@ export default React.createClass({
 		if(prevContainersState[index].stateName === 'up'){
 			prevContainersState[index].stateName = 'clicked'
 			this.setState({prevContainersState})
-			console.log(this.verifyEndGame())
 		}
 	},
 
