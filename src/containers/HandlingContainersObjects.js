@@ -11,11 +11,13 @@ const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
 
 export default React.createClass({
 	getInitialState() {
-		return { containersState: this.createContainers(this.props.numContainers)}
+		return { game: false, 
+				containersState: this.createContainers(this.props.numContainers),
+				counter: 'Ready??' }
 	},
 
 	intervals: [],
-	intervalCounter: 8,
+	intervalCounter: -4,
 
 	componentDidMount(){
 		this.handleIntervals(INTERVAL_MS)
@@ -29,23 +31,35 @@ export default React.createClass({
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
 
-	     	// Put everyone up
-	     	if(this.intervalCounter === 0){
-				const prevContainersState = this.state.containersState
-				prevContainersState.forEach((currentContainer) => {
-					currentContainer.stateName = 'up'
-					})
-		     	this.setState({prevContainersState})
+	     	if(this.intervalCounter < 0){
+		     	// Print 3
+		     	const counterAux = this.intervalCounter * - 1
+		     	this.setState({counter: counterAux})
+		     	
+	     	} 
+	     	else {
+		     	// Put everyone up
+		     	if(this.intervalCounter === 0){
+					const prevContainersState = this.state.containersState
+					prevContainersState.forEach((currentContainer) => {
+						currentContainer.stateName = 'up'
+						})
+			     	this.setState({containerState: prevContainersState, 
+			     				game: true, counter: 'UP'})
+		     	}
+
+		     	// Put everyone down
+		     	if(this.intervalCounter === 8){
+			     	const prevContainersState = this.state.containersState
+					prevContainersState.forEach((currentContainer) => {
+						currentContainer.stateName = 'down'
+						})
+			     	this.setState({containerState: prevContainersState, 
+			     				counter: 'DOWN'})
+		     	}
 	     	}
 
-	     	// Put everyone down
-	     	if(this.intervalCounter === 8){
-		     	const prevContainersState = this.state.containersState
-				prevContainersState.forEach((currentContainer) => {
-					currentContainer.stateName = 'down'
-					})
-		     	this.setState({prevContainersState})
-	     	}
+
 
 	   	}.bind(this), ms));
 	},
@@ -55,7 +69,7 @@ export default React.createClass({
 		const prevContainersState = this.state.containersState;
 		if(prevContainersState[index].stateName === 'up'){
 			prevContainersState[index].stateName = 'clicked'
-			this.setState({prevContainersState})
+			this.setState({containerState: prevContainersState})
 		}
 		this.verifyEndGame()
 	},
@@ -63,30 +77,33 @@ export default React.createClass({
 
 	render(){
 		return (
-			<div style={style}>
-				{
-					this.state.containersState.slice(0,NUM_CONTAINERS/2 + 1)
-					.map( (containerState) => {
-					return (
-						<ContainerObject 
-							stateName={containerState.stateName}
-							index={containerState.index}
-							onClick={this.handleClick}/>
-						)
-					} )
-				}
-				<br/>
-				{
-					this.state.containersState.slice(NUM_CONTAINERS/2 + 1,NUM_CONTAINERS)
-					.map( (containerState) => {
-					return (
-						<ContainerObject 
-							stateName={containerState.stateName}
-							index={containerState.index}
-							onClick={this.handleClick}/>
-						)
-					} )
-				}
+			<div>
+				<div style={style}>
+					{
+						this.state.containersState.slice(0,NUM_CONTAINERS/2 + 1)
+						.map( (containerState) => {
+						return (
+							<ContainerObject 
+								stateName={containerState.stateName}
+								index={containerState.index}
+								onClick={this.handleClick}/>
+							)
+						} )
+					}
+					<br/>
+					{
+						this.state.containersState.slice(NUM_CONTAINERS/2 + 1,NUM_CONTAINERS)
+						.map( (containerState) => {
+						return (
+							<ContainerObject 
+								stateName={containerState.stateName}
+								index={containerState.index}
+								onClick={this.handleClick}/>
+							)
+						} )
+					}
+				</div>
+				<h2>{this.state.counter}</h2>
 			</div>
 			)
 	},
@@ -115,6 +132,7 @@ export default React.createClass({
 
 	endGame(){
 		this.intervals = []
+		this.setState({game: false})
 	},
 
 	createContainers(numContainers){

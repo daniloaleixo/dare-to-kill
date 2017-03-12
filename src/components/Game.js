@@ -10,7 +10,7 @@ const gameStyle = {
 
 export default React.createClass({
 	getInitialState(){
-		return { game: 'welcome' }
+		return { game: 'play' }
 	},
 
 	gameComponent: null,
