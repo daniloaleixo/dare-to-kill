@@ -1,0 +1,10 @@
+@keyframes example {
+    from {color: red;}
+    to {color: yellow;}
+}
+
+.bla {
+	color: red;
+    animation-name: example;
+    animation-duration: 0.5s;
+}

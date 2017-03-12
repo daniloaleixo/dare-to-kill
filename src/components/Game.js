@@ -34,7 +34,7 @@ export default React.createClass({
 			<div style={gameStyle}>
 				<div className='bgImage'>
 					<div className='title-box'>
-						<h1>Dare to kill my app</h1>
+						<h1>I Dare you to kill my app</h1>
 						{this.gameComponent}
 					</div>
 					<div className='logoFooter'>
