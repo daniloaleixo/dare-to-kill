@@ -1,0 +1,17 @@
+
+.containerStyle {
+	width: 3em;
+	height: 3em;
+	float: left;
+	clear: none;
+	margin: 1%;
+	background: red;
+}
+
+.containerImg {	
+	width: 3em;
+	height: 3em;
+	float: left;
+	clear: none;
+	margin: 1%;
+}

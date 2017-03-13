@@ -1,13 +1,9 @@
 import React from 'react'
+import './ContainerObject.css'
+import happy from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_happy2.png'
+import sad from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
+import blocked from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
 
-
-const containerStyle = {
-	width: '3em',
-	height: '3em',
-	float: 'left',
-	clear: 'none',
-	margin: '1%'
-}
 
 export default React.createClass({
 	
@@ -18,22 +14,23 @@ export default React.createClass({
 
 	handleClick(e){
 		this.props.onClick(this.props.index)
+		console.log('clicked')
 	},
 
 	render() {
-		let backgroundColor = ''
+		let srcImg = ''
 
 		switch(this.props.stateName){
-			case 'down': backgroundColor = 'red'; break;
-			case 'up': backgroundColor = 'green'; break;
-			case 'clicked': backgroundColor = 'blue'; break;
-			default: backgroundColor = 'black'
+			case 'down': srcImg = blocked; break;
+			case 'up': srcImg = happy; break;
+			case 'clicked': srcImg = sad; break;
+			default: srcImg = blocked
 		}
-		const newStyle = {...containerStyle, background: backgroundColor}
 		return (
-			<div style={newStyle} 
-				onClick={this.handleClick}>
-			</div>
+			// <div className='containerStyle' style={{background: backgroundColor}} 
+				// onClick={this.handleClick}>
+			// </div>
+				<img src={srcImg} className='containerImg' onClick={this.handleClick}/>
 			)
 	}
 })
