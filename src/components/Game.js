@@ -61,7 +61,7 @@ export default React.createClass({
 			case 'won':
 				this.gameComponent = (
 					<div>
-						<h2>Você ganhou</h2>
+						<h2>You won</h2>
 						<button onClick={this.handleGameState}>Play Again</button>
 					</div>
 					)
@@ -73,10 +73,7 @@ export default React.createClass({
 							<div className='textbox'>
 								<h2 className='title'>Instructions</h2>
 								<p className='text'>
-									You have to dsajkhdad
-									sadjbasdaja
-									dhdasd
-									sadassaasbsahdsa
+									You have to click on the containers and try to bring them down
 								</p>
 								<button className='button' 
 									onClick={this.handleGameState}>Play</button>

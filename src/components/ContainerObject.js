@@ -1,9 +1,11 @@
 import React from 'react'
 import './ContainerObject.css'
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import happy from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_happy2.png'
 import sad from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
 import blocked from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
 import '../animations.css'
+
 
 const containerImage = {
 	width: '3em',
