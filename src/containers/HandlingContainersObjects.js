@@ -1,11 +1,13 @@
 import React from 'react'
 import ContainerObject from '../components/ContainerObject'
+import './HandlingContainersObjects.css';
 
 const style = {
 	display: 'flex',
 	flexWrap: 'wrap',
 	justifyContent:'center'
 }
+
 
 const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
 
@@ -103,7 +105,7 @@ export default React.createClass({
 						} )
 					}
 				</div>
-				<h2>{this.state.counter}</h2>
+				<h2 className='counter-text'>{this.state.counter}</h2>
 			</div>
 			)
 	},
