@@ -2,6 +2,7 @@ import React from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import logo from '../logo-getup.png'
 import './Game.css';
+import '../animations.css'
 
 const gameStyle = {
 	
@@ -33,7 +34,7 @@ export default React.createClass({
 		return (
 			<div style={gameStyle}>
 				<div className='bgImage'>
-					<div className='title-box'>
+					<div className='title-box  fadeIn'>
 						<h1>I Dare you to kill my app</h1>
 						{this.gameComponent}
 					</div>
