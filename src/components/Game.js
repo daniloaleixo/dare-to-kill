@@ -1,12 +1,9 @@
 import React from 'react'
-import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import logo from '../logo-getup.png'
+import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import './Game.css';
-import '../animations.css'
-
-const gameStyle = {
-	
-}
+import '../animate.css'
+import {WelcomeScreen, InstructionsScreen, PlayingScreen, GameWonScreen} from './GameScenes'
 
 
 export default React.createClass({
@@ -18,7 +15,7 @@ export default React.createClass({
 	numContainers: 11,
 
 	handleGameState(){
-		// If we're in the welcome screen play the game
+		// Handling state machine
 		if(this.state.game === 'welcome')
 			this.setState({game: 'instructions'})
 		if(this.state.game === 'instructions')
@@ -32,9 +29,9 @@ export default React.createClass({
 	render(){
 		this.checkButtonOrGame()
 		return (
-			<div style={gameStyle}>
+			<div>
 				<div className='bgImage'>
-					<div className='title-box  fadeIn'>
+					<div className='title-box'>
 						<h1>I Dare you to kill my app</h1>
 						{this.gameComponent}
 					</div>
@@ -49,38 +46,17 @@ export default React.createClass({
 	checkButtonOrGame(){
 		switch(this.state.game){
 			case 'welcome':
-				this.gameComponent = (<button
-									onClick={this.handleGameState}>
-										Start Game
-									</button>)
+				this.gameComponent = <WelcomeScreen onClick={this.handleGameState}/>
+				break
+			case 'instructions':
+				this.gameComponent = <InstructionsScreen onClick={this.handleGameState}/>
 				break
 			case 'play':
-				this.gameComponent = <HandlingContainersObjects numContainers={this.numContainers} 
+				this.gameComponent = <PlayingScreen numContainers={this.numContainers} 
 										inCaseOfWin={this.handleGameState}/>
 				break
 			case 'won':
-				this.gameComponent = (
-					<div>
-						<h2>You won</h2>
-						<button onClick={this.handleGameState}>Play Again</button>
-					</div>
-					)
-				break
-			case 'instructions':
-				this.gameComponent = (
-					<div>
-						<div className='instructions'>
-							<div className='textbox'>
-								<h2 className='title'>Instructions</h2>
-								<p className='text'>
-									You have to click on the containers and try to bring them down
-								</p>
-								<button className='button' 
-									onClick={this.handleGameState}>Play</button>
-							</div>
-						</div>
-					</div>
-					)
+				this.gameComponent = <GameWonScreen onClick={this.handleGameState}/>
 				break
 			default:
 				break

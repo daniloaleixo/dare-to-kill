@@ -4,7 +4,7 @@ import './ContainerObject.css'
 import happy from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_happy2.png'
 import sad from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
 import blocked from '../main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
-import '../animations.css'
+import '../animate.css'
 
 
 const containerImage = {
