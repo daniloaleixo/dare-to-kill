@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from '../logo-getup.png'
-import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import './Game.css';
 import '../animate.css'
 import {WelcomeScreen, InstructionsScreen, PlayingScreen, GameWonScreen} from './GameScenes'

@@ -41,6 +41,7 @@ export default React.createClass({
 				// onClick={this.handleClick}>
 			// </div>
 				<img src={srcImg} 
+					alt='ContainerImage'
 					style={containerImage} 
 					className="slideUp"
 					onClick={this.handleClick}/>
