@@ -6,10 +6,12 @@ import './GameScenes.css'
 class WelcomeScreen extends Component {
 	render(){
 		return (
-			<button
-			onClick={this.props.onClick}>
-				Start Game
-			</button>
+			<div className='animated fadeIn'>
+				<button
+				onClick={this.props.onClick}>
+					Start Game
+				</button>
+			</div>
 		)
 	}
 }
@@ -36,8 +38,10 @@ class InstructionsScreen extends Component {
 class PlayingScreen extends Component {
 	render(){
 		return (
-			<HandlingContainersObjects numContainers={this.props.numContainers} 
+			<div className='animated fadeIn'>
+				<HandlingContainersObjects numContainers={this.props.numContainers} 
 													inCaseOfWin={this.props.inCaseOfWin}/>
+			</div>
 		)
 	}
 }
@@ -45,7 +49,7 @@ class PlayingScreen extends Component {
 class GameWonScreen extends Component {
 	render(){
 		return (
-			<div>
+			<div className='animated fadeIn'>
 				<h2>You won</h2>
 				<button onClick={this.props.onClick}>Play Again</button>
 			</div>

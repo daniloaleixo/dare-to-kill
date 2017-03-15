@@ -33,7 +33,7 @@ export default React.createClass({
 
 		switch(this.props.stateName){
 			case 'down': srcImg = blocked; imgAnimation = 'animated fadeInDown'; break;
-			case 'up': srcImg = happy; imgAnimation = 'animated shake'; break;
+			case 'up': srcImg = happy; imgAnimation = 'shakeUpAndDown'; break;
 			case 'clicked': srcImg = sad; imgAnimation = 'animated fadeOutDown'; break;
 			default: srcImg = blocked
 		}
