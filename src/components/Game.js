@@ -15,7 +15,9 @@ export default React.createClass({
 						<GameStateMachine/>
 					</div>
 					<div className='logoFooter'>
-						<img src={logo} alt='Logo' className='img-logo'/>
+						<a href='https://getupcloud.com/'>
+							<img src={logo} alt='Logo' className='img-logo'/>
+						</a>
 					</div>
 				</div>
 			</div>
