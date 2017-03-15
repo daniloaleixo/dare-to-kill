@@ -54,10 +54,10 @@ class GameWonScreen extends Component {
 					<div className='textbox'>
 						<h2 className='title'>You won</h2>
 						<button onClick={this.props.onClick}>Play Again</button>
-						<h3 className='title'>
+						<h3 className='title' style={{marginBottom: '-0.5em'}}>
 							Share
 						</h3>
-						{/* Share face*/}
+						{/* Share facebook*/}
 						<span
 							data-href="https://daretokill-79f8f.firebaseapp.com/" 
 							data-layout="button" 
