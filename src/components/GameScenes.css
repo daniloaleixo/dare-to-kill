@@ -50,7 +50,10 @@
 	padding-top: 0.818em;
 	padding-left: 0.909em;
 	padding-right: 0.909em;
-	margin: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
 }
 
 .share-button:hover {
