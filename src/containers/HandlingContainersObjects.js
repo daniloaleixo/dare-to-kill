@@ -1,11 +1,14 @@
 import React from 'react'
 import ContainerObject from '../components/ContainerObject'
-import './HandlingContainersObjects.css';
 
 const style = {
 	display: 'flex',
 	flexWrap: 'wrap',
 	justifyContent:'center'
+}
+
+const counterText = {
+	fontSize: '40px'
 }
 
 
@@ -27,8 +30,6 @@ export default React.createClass({
 
 	handleIntervals(ms) {
 	   	this.intervals.push(setInterval(function(){
-
-	   		console.log(this.intervalCounter)
 
 	   		//Increment the interval counter
 	     	this.intervalCounter = (this.intervalCounter + 1) % 10
@@ -105,7 +106,7 @@ export default React.createClass({
 						} )
 					}
 				</div>
-				<h2 className='counter-text'>{this.state.counter}</h2>
+				<h2 style={counterText}>{this.state.counter}</h2>
 			</div>
 			)
 	},
