@@ -24,7 +24,7 @@
 	color: #5b5b5b !important;
 	text-transform: uppercase;
 	text-align: center;
-	padding-top: 5%;
+	padding-top: 1em;
 }
 
 .instructions .textbox .text {
@@ -40,4 +40,32 @@
 .instructions .textbox .button {
 	clear: none;
 	margin-bottom: 20px;
+}
+
+.share-button {
+	color: #2da2ba;
+	border: 2px solid #2da2ba;
+	background-color: transparent;
+	padding-bottom: 0.818em;
+	padding-top: 0.818em;
+	padding-left: 0.909em;
+	padding-right: 0.909em;
+	margin: 1em;
+}
+
+.share-button:hover {
+	color: #ffffff;
+	border: 2px solid #228c93;
+	background-color: #228c93;
+
+}
+
+.textbox {
+	display: block;
+	margin: auto;
+	box-sizing: border-box;
+	background: #ffffff;
+	position: relative;
+	width: 100%;
+	text-align: center;
 }

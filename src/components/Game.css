@@ -26,7 +26,7 @@ h1 {
 	line-height: 28px;
 	text-transform: uppercase;
 	opacity: 0.9;
-	margin-bottom: 10%;
+	margin-bottom: 1.5em;
 }
 
 h2 {
@@ -37,6 +37,17 @@ h2 {
 	font-size: 22px;
 	line-height: 28px;
 	opacity: 0.9;
+}
+
+h3 {
+	color: white;
+	font-family: Nunito, Verdana;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 28px;
+	opacity: 0.9;
+	text-transform: none !important;
 }
 
 button {
