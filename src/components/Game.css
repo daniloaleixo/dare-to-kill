@@ -13,7 +13,7 @@ body {
 
 .title-box {
 	margin: auto;
-	padding-top: 3em;
+	padding-top: 2em;
 	text-align: center;
 }
 
@@ -23,10 +23,12 @@ h1 {
 	font-weight: 300;
 	font-style: normal;
 	font-size: 32px;
-	line-height: 28px;
+	line-height: 32px;
 	text-transform: uppercase;
 	opacity: 0.9;
 	margin-bottom: 1em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
 }
 
 h2 {

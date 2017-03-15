@@ -7,7 +7,7 @@ class WelcomeScreen extends Component {
 	render(){
 		return (
 			<div className='animated fadeIn'>
-				<button
+				<button style={{marginTop: '3em'}}
 				onClick={this.props.onClick}>
 					Start Game
 				</button>
