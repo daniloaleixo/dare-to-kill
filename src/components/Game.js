@@ -19,6 +19,7 @@ export default React.createClass({
 							<img src={logo} alt='Logo' className='img-logo'/>
 						</a>
 					</div>
+					
 				</div>
 			</div>
 			)

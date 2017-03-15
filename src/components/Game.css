@@ -8,7 +8,7 @@ body {
 	height: 100%;
 	background-size: cover;;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 }
 
 .title-box {
@@ -84,12 +84,19 @@ button:hover {
 
 
 .logoFooter {
+	position: fixed;
+	width: 100%;
+	height: 15em;
+	background-color: #ffffff;
+	max-height: 40px;
+	bottom: 0%;
+	right: 0%;
 	justify-content:center;
 }
 
 .logoFooter .img-logo {
 	position: absolute;
-	max-width: 100px;
-	bottom: 1%;
+	max-height: 30px;
+	bottom: 2%;
 	right: 1%
 }
