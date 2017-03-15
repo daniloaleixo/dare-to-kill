@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
 import '../animate.css'
 import './GameScenes.css'
+import playingGif from '../playing.gif'
 
 class WelcomeScreen extends Component {
 	render(){
@@ -52,11 +53,14 @@ class GameWonScreen extends Component {
 			<div className='animated fadeIn'>
 				<div className='instructions'>
 					<div className='textbox'>
-						<h2 className='title'>You won</h2>
+						<h2 className='title animated tada'>You win</h2>
 						<button onClick={this.props.onClick}>Play Again</button>
 						<h3 className='title' style={{marginBottom: '-0.5em'}}>
 							Share
 						</h3>
+						<div>
+							<img src={playingGif} className='playing-gif'/>
+						</div>
 						{/* Share facebook*/}
 						<span
 							data-href="https://daretokill-79f8f.firebaseapp.com/" 

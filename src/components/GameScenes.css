@@ -72,3 +72,8 @@
 	width: 100%;
 	text-align: center;
 }
+
+.playing-gif {
+	max-height: 200px;
+	margin: 1em;
+}
