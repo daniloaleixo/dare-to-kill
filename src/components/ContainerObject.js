@@ -29,11 +29,12 @@ export default React.createClass({
 
 	render() {
 		let srcImg = ''
+		let imgAnimation = ''
 
 		switch(this.props.stateName){
-			case 'down': srcImg = blocked; break;
-			case 'up': srcImg = happy; break;
-			case 'clicked': srcImg = sad; break;
+			case 'down': srcImg = blocked; imgAnimation = 'animated fadeInDown'; break;
+			case 'up': srcImg = happy; imgAnimation = 'animated shake'; break;
+			case 'clicked': srcImg = sad; imgAnimation = 'animated fadeOutDown'; break;
 			default: srcImg = blocked
 		}
 		return (
@@ -43,7 +44,7 @@ export default React.createClass({
 				<img src={srcImg} 
 					alt='ContainerImage'
 					style={containerImage} 
-					className="slideUp"
+					className={imgAnimation}
 					onClick={this.handleClick}/>
 			)
 	}

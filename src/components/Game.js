@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from '../logo-getup.png'
 import './Game.css';
-import '../animate.css'
 import GameStateMachine from '../containers/GameStateMachine'
+import '../animate.css'
 
 
 export default React.createClass({
@@ -11,7 +11,7 @@ export default React.createClass({
 			<div>
 				<div className='bgImage'>
 					<div className='title-box'>
-						<h1>I Dare you to kill my app</h1>
+						<h1 className='animated tada'>I Dare you to kill my app</h1>
 						<GameStateMachine/>
 					</div>
 					<div className='logoFooter'>

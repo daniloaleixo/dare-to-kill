@@ -14,6 +14,25 @@ class WelcomeScreen extends Component {
 	}
 }
 
+class InstructionsScreen extends Component {
+	render(){
+		return (
+			<div className='animated fadeIn'>
+				<div className='instructions'>
+					<div className='textbox'>
+						<h2 className='title'>Instructions</h2>
+						<p className='text'>
+							You have to click on the containers and try to bring them down
+						</p>
+						<button className='button' 
+							onClick={this.props.onClick}>Play</button>
+					</div>
+				</div>
+			</div>
+		)
+	}
+}
+
 class PlayingScreen extends Component {
 	render(){
 		return (
@@ -34,24 +53,6 @@ class GameWonScreen extends Component {
 	}
 }
 
-class InstructionsScreen extends Component {
-	render(){
-		return (
-			<div>
-				<div className='instructions'>
-					<div className='textbox'>
-						<h2 className='title'>Instructions</h2>
-						<p className='text'>
-							You have to click on the containers and try to bring them down
-						</p>
-						<button className='button' 
-							onClick={this.props.onClick}>Play</button>
-					</div>
-				</div>
-			</div>
-		)
-	}
-}
 
 export {
 	WelcomeScreen,
