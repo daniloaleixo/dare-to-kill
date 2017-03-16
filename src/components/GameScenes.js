@@ -20,7 +20,7 @@ class WelcomeScreen extends Component {
 class InstructionsScreen extends Component {
 	render(){
 		return (
-			<div className='animated fadeIn fadeOut'>
+			<div className='animated fadeIn'>
 				<div className='instructions'>
 					<div className='textbox'>
 						<h2 className='title'>Instructions</h2>
