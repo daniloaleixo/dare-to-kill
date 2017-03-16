@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../logo-getup.png'
+import logo from '../img/logo-getup.png'
 import './Game.css';
 import GameStateMachine from '../containers/GameStateMachine'
 import '../animate.css'
