@@ -38,7 +38,7 @@ export default React.createClass({
 		switch(this.props.stateName){
 			case 'down': 
 				imgAnimation = 'animated fadeInDown brightness-50'; 
-				statusImg = alive;
+				statusImg = dead;
 				break;
 			case 'up': 
 				imgAnimation = 'shakeUpAndDown brightness-100'; 
