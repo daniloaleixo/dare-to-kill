@@ -115,3 +115,13 @@ h2 {
 .white-box {
 	background: #fff;
 }
+
+.white-text {
+	color: #fff;
+}
+
+.font-size-40 {
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 100;
+}

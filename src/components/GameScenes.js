@@ -55,7 +55,7 @@ class InstructionsScreen extends Component {
 class PlayingScreen extends Component {
 	render(){
 		return (
-			<div className='animated fadeIn'>
+			<div className='animated fadeIn margin-top-30'>
 				<HandlingContainersObjects numContainers={this.props.numContainers} 
 													inCaseOfWin={this.props.inCaseOfWin}/>
 			</div>
