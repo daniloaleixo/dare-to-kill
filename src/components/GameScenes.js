@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
-import {Image, PageHeader, Button, Grid, Row, Col, Clearfix} from 'react-bootstrap'
+import {Image, PageHeader, Button, Grid, Row, Col} from 'react-bootstrap'
 import '../animate.css'
 import './GameScenes.css'
 import playingGif from '../img/playing.gif'

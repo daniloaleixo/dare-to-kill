@@ -1,18 +1,8 @@
 import React from 'react'
 import ContainersTogether from '../components/ContainersTogether'
 
-const style = {
-	display: 'flex',
-	flexWrap: 'wrap',
-	justifyContent:'center'
-}
 
-const counterText = {
-	fontSize: '40px'
-}
-
-
-const NUM_CONTAINERS = 11, INTERVAL_MS = 700;
+const INTERVAL_MS = 700;
 
 export default React.createClass({
 	getInitialState() {
