@@ -5,15 +5,16 @@ import happy from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_happy2.png'
 import sad from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
 import blocked from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
 import '../animate.css'
+import {Image} from 'react-bootstrap'
 
 
-const containerImage = {
+const containerImageStyle = {
 	width: '3em',
 	height: '3em',
 	float: 'left',
 	clear: 'none',
 	margin: '1%'
-}
+};
 
 export default React.createClass({
 	
@@ -38,12 +39,10 @@ export default React.createClass({
 			default: srcImg = blocked
 		}
 		return (
-			// <div className='containerStyle' style={{background: backgroundColor}} 
-				// onClick={this.handleClick}>
-			// </div>
-				<img src={srcImg} 
-					alt='ContainerImage'
-					style={containerImage} 
+			<Image src={srcImg} 
+					responsive 
+					alt="Container Image"
+					style={containerImageStyle} 
 					className={imgAnimation}
 					onClick={this.handleClick}/>
 			)
