@@ -1,5 +1,6 @@
 body {
 	font-family: Nunito, Verdana;
+	text-align: center;
 }
 
 h1 {
@@ -114,6 +115,11 @@ h2 {
 .align-center {
 	display: flex;
 	justify-content: center;
+}
+
+.container {
+	display: table-cell;
+	vertical-align: middle;
 }
 
 

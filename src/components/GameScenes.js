@@ -15,8 +15,8 @@ class WelcomeScreen extends Component {
 		return (
 			<Grid className="animated fadeIn">
 				<Row className="show-grid margin-top-10">
-					<Col xs={1} md={3} />
-					<Col xs={10} md={6}>
+					<Col xsHidden md={3} lg={3} />
+					<Col xs={12} md={6} lg={6}>
 						<PageHeader className="no-border-bottom animated tada">I Dare you to kill my app</PageHeader>
 						<Button
 					        bsStyle="primary"
@@ -24,7 +24,7 @@ class WelcomeScreen extends Component {
 					        Iniciar
 					</Button>
 					</Col>
-					<Col xs={1} md={3} />
+					<Col xsHidden md={3} lg={3} />
 				</Row>
 			</Grid>
 		)
@@ -36,8 +36,8 @@ class InstructionsScreen extends Component {
 		return (
 			<Grid className="animated fadeIn">
 				<Row className="show-grid  margin-top-10">
-					<Col xs={1} md={3} />
-					<Col xs={10} md={6} className="white-box">
+					<Col xsHidden md={3} lg={3} />
+					<Col xs={12} md={6} className="white-box">
 						<h2>Como jogar</h2>
 						<p>
 							Containers docker no Kubernetes são rápidos, mas será que você consegue ser mais rápido ainda?
@@ -46,7 +46,7 @@ class InstructionsScreen extends Component {
 						<Button bsStyle="primary"
 							onClick={this.props.onClick} className="margin-bottom-10">Play</Button>
 					</Col>
-					<Col xs={1} md={3} />
+					<Col xsHidden md={3} lg={3} />
 				</Row>
 			</Grid>
 		)
@@ -69,8 +69,8 @@ class GameWonScreen extends Component {
 		return (
 			<Grid className="animated fadeIn">
 				<Row className="no-margin-bottom">
-					<Col xs={1} md={3} />
-					<Col xs={10} md={6}>
+					<Col xsHidden md={3} lg={3} />
+					<Col xs={12} md={6} lg={6}>
 						<Row>
 							<Col xs={12} md={12}>
 								<PageHeader className="no-border-bottom 
@@ -120,7 +120,7 @@ class GameWonScreen extends Component {
 							</Col>
 						</Row>
 					</Col>
-					<Col xs={1} md={3} />
+					<Col xsHidden md={3} lg={3} />
 				</Row>
 			</Grid>
 		)

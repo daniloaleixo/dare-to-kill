@@ -14,8 +14,8 @@ export default React.createClass({
 		return(
 			<Grid>
 				<Row>
-					<Col xs={1} md={3} />
-					<Col xs={10} md={6}>
+					<Col xsHidden md={3} lg={3} />
+					<Col xs={12} md={6} lg={6}>
 						<Row>
 							<Col xs={12} md={12} style={style}>
 
@@ -53,7 +53,7 @@ export default React.createClass({
 							</Col>
 						</Row>
 					</Col>
-					<Col xs={1} md={3} />
+					<Col xsHidden md={3} lg={3} />
 				</Row>
 			</Grid>
 			)

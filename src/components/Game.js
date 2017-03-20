@@ -14,11 +14,11 @@ export default React.createClass({
 		return (
 			<Grid className="background-image">
 				<Row className="show-grid full-height">
-					<Col xs={1} md={3} />
-					<Col xs={10} md={6}>
+					<Col xsHidden md={3} lg={3} />
+					<Col xs={12} md={6} lg={6}>
 						<GameStateMachine/>
 					</Col>
-					<Col xs={1} md={3} />
+					<Col xsHidden md={3} lg={3} />
 				</Row>
 				<Row className="show-grid">
 					<Col xs={12} md={12} className="align-right footer-position">
