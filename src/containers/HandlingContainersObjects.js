@@ -72,7 +72,8 @@ export default React.createClass({
 		return (
 			<ContainersTogether containersState={this.state.containersState} 
 						onClick={this.handleClick} 
-						counterText={this.state.counter}/>
+						counterText={this.state.counter}
+						numContainers={this.props.numContainers}/>
 			)
 	},
 

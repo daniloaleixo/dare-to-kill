@@ -3,8 +3,6 @@ import { Grid, Row, Col} from 'react-bootstrap'
 import ContainerObject from './ContainerObject'
 
 
-const NUM_CONTAINERS = 9;
-
 const style = {
 	display: 'flex',
 	flexWrap: 'wrap',
@@ -22,7 +20,7 @@ export default React.createClass({
 							<Col xs={12} md={12} style={style}>
 
 								{
-									this.props.containersState.slice(0,NUM_CONTAINERS/2 + 1)
+									this.props.containersState.slice(0,this.props.numContainers/2 + 1)
 									.map( (containerState) => {
 									return (
 										<ContainerObject 
@@ -37,7 +35,7 @@ export default React.createClass({
 						<Row>
 							<Col xs={12} md={12}  style={style}>
 								{
-									this.props.containersState.slice(NUM_CONTAINERS/2 + 1,NUM_CONTAINERS)
+									this.props.containersState.slice(this.props.numContainers/2 + 1,this.props.numContainers)
 									.map( (containerState) => {
 									return (
 										<ContainerObject 

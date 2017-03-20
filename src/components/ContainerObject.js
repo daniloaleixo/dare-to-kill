@@ -25,7 +25,6 @@ export default React.createClass({
 
 	handleClick(e){
 		this.props.onClick(this.props.index)
-		console.log('clicked')
 	},
 
 	render() {

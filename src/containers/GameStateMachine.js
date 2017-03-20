@@ -10,7 +10,7 @@ export default React.createClass({
 		return { game: 'welcome' }
 	},
 	gameScene: null,
-	numContainers: 11,
+	numContainers: 9,
 
 	handleGameState(){
 		// Handling state machine
