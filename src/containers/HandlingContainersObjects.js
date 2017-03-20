@@ -1,5 +1,5 @@
 import React from 'react'
-import ContainerObject from '../components/ContainerObject'
+import ContainersTogether from '../components/ContainersTogether'
 
 const style = {
 	display: 'flex',
@@ -80,34 +80,9 @@ export default React.createClass({
 
 	render(){
 		return (
-			<div>
-				<div style={style}>
-					{
-						this.state.containersState.slice(0,NUM_CONTAINERS/2 + 1)
-						.map( (containerState) => {
-						return (
-							<ContainerObject 
-								stateName={containerState.stateName}
-								index={containerState.index}
-								onClick={this.handleClick}/>
-							)
-						} )
-					}
-					<br/>
-					{
-						this.state.containersState.slice(NUM_CONTAINERS/2 + 1,NUM_CONTAINERS)
-						.map( (containerState) => {
-						return (
-							<ContainerObject 
-								stateName={containerState.stateName}
-								index={containerState.index}
-								onClick={this.handleClick}/>
-							)
-						} )
-					}
-				</div>
-				<h2 style={counterText}>{this.state.counter}</h2>
-			</div>
+			<ContainersTogether containersState={this.state.containersState} 
+						onClick={this.handleClick} 
+						counterText={this.state.counter}/>
 			)
 	},
 
