@@ -8,16 +8,16 @@ import playingGif from '../img/playing.gif'
 class WelcomeScreen extends Component {
 	constructor(...args){
 		super(...args);
-		this.state= {}
+		this.state = {}
 	}
 
 	render(){
 		return (
-			<Grid>
+			<Grid className="animated fadeIn">
 				<Row className="show-grid margin-top-10">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6}>
-						<PageHeader className="no-border-bottom">I Dare you to kill my app</PageHeader>
+						<PageHeader className="no-border-bottom animated tada">I Dare you to kill my app</PageHeader>
 						<Button
 					        bsStyle="primary"
 					        onClick={this.props.onClick}>
@@ -34,7 +34,7 @@ class WelcomeScreen extends Component {
 class InstructionsScreen extends Component {
 	render(){
 		return (
-			<Grid>
+			<Grid className="animated fadeIn">
 				<Row className="show-grid  margin-top-10">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6} className="white-box">
@@ -66,13 +66,15 @@ class PlayingScreen extends Component {
 class GameWonScreen extends Component {
 	render(){
 		return (
-			<Grid>
+			<Grid className="animated fadeIn">
 				<Row className="no-margin-bottom">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6}>
 						<Row>
 							<Col xs={12} md={12}>
-								<PageHeader className="no-border-bottom no-margin-bottom">You won</PageHeader>
+								<PageHeader className="no-border-bottom 
+									no-margin-bottom animated tada">
+									You won</PageHeader>
 							</Col>
 						</Row>
 						<Row>
