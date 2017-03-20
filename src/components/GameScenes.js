@@ -14,7 +14,7 @@ class WelcomeScreen extends Component {
 	render(){
 		return (
 			<Grid>
-				<Row className="show-grid margin-top-30">
+				<Row className="show-grid margin-top-10">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6}>
 						<PageHeader className="no-border-bottom">I Dare you to kill my app</PageHeader>
@@ -35,7 +35,7 @@ class InstructionsScreen extends Component {
 	render(){
 		return (
 			<Grid>
-				<Row className="show-grid  margin-top-30">
+				<Row className="show-grid  margin-top-10">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6} className="white-box">
 						<h2>Instructions</h2>
@@ -67,17 +67,18 @@ class GameWonScreen extends Component {
 	render(){
 		return (
 			<Grid>
-				<Row>
+				<Row className="no-margin-bottom">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6}>
 						<Row>
 							<Col xs={12} md={12}>
-								<PageHeader>You won</PageHeader>
+								<PageHeader className="no-border-bottom no-margin-bottom">You won</PageHeader>
 							</Col>
 						</Row>
 						<Row>
-							<Col xs={12} md={12}>
-								<Image src={playingGif} responsive alt="playing gif"/>
+							<Col xs={12} md={12} className="align-center">
+								<Image src={playingGif} responsive alt="playing gif" 
+										className="margin-bottom-5 full-width full-height max-width-250"/>
 							</Col>
 						</Row>
 						<Row>
@@ -87,30 +88,30 @@ class GameWonScreen extends Component {
 						</Row>
 						<Row>
 							<Col xs={12} md={12}>
-								<h3>
+								<h3 className="white-text">
 									Compartilhe
 								</h3>
 							</Col>
 						</Row>
 						<Row>
-							<Col xs={6} md={6}>
+							<Col xs={6} md={6} className="align-center">
 								<span
 									data-href="https://daretokill-79f8f.firebaseapp.com/" 
 									data-layout="button" 
 									data-mobile-iframe="true"><a 
-									className="fb-xfbml-parse-ignore" 
+									className="fb-xfbml-parse-ignore full-width" 
 									target="_blank" 
 									href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdaretokill-79f8f.firebaseapp.com%2F&amp;src=sdkpreparse">
-										<Button bsStyle="primary" bsSize="xsmall">Facebook</Button>
+										<Button bsStyle="info" bsSize="xsmall">Facebook</Button>
 									</a>
 								</span>
 							</Col>
 							<Col xs={6} md={6}>
-								<span>
+								<span className="full-width">
 									<a href="https://twitter.com/share" 
 										data-url="https://daretokill-79f8f.firebaseapp.com/" 
 										data-hashtags="getupcloud">
-											<Button bsStyle="primary" bsSize="xsmall">Twitter</Button>
+											<Button bsStyle="info" bsSize="xsmall">Twitter</Button>
 									</a> 
 								</span>
 							</Col>
