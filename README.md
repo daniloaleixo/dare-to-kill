@@ -11,14 +11,9 @@ Containers docker no Kubernetes são rápidos, mas será que você consegue ser 
 	sudo apt-get install -y nodejs
 	```
 
-* React 
+* Instalando dependências 
 	```sh
-	npm install -g create-react-app
-	```
-
-* Firebase 
-	```sh
-	npm install -g firebase-tools
+	npm install
 	```
 
 ## Rodando o sistema ##
@@ -27,7 +22,7 @@ Containers docker no Kubernetes são rápidos, mas será que você consegue ser 
 
 * Desenvolvimento 
 	```sh
-	npm install -g firebase-tools
+	npm start
 	```
 * Produção
 	Para export pro ambiente de produção basta rodar o script
