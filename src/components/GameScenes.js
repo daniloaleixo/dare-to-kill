@@ -35,15 +35,15 @@ class InstructionsScreen extends Component {
 	render(){
 		return (
 			<Grid>
-				<Row className="show-grid">
+				<Row className="show-grid  margin-top-30">
 					<Col xs={1} md={3} />
-					<Col xs={10} md={6}>
-						<h2 className='title'>Instructions</h2>
-						<p className='text'>
+					<Col xs={10} md={6} className="white-box">
+						<h2>Instructions</h2>
+						<p>
 							You have to click on the containers and try to bring them down
 						</p>
 						<Button bsStyle="primary"
-							onClick={this.props.onClick}>Play</Button>
+							onClick={this.props.onClick} className="margin-bottom-10">Play</Button>
 					</Col>
 					<Col xs={1} md={3} />
 				</Row>

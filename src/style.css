@@ -1,10 +1,9 @@
 body {
-
+	font-family: Nunito, Verdana;
 }
 
 h1 {
-	color: white;
-	font-family: Nunito, Verdana;
+	color: #fff;
 	font-weight: 300;
 	font-style: normal;
 	font-size: 32px;
@@ -15,6 +14,23 @@ h1 {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
+h2 {
+	color: #5b5b5b;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 28px;
+	text-transform: uppercase;
+	padding-top: 10%;
+}
+
+ p {
+ 	padding-top: 5%;
+ 	color: #5b5b5b;
+	font-weight: 100;
+	padding-bottom: 5%;
+ }
 
 .btn-primary {
 	background-color: #ff4c4d;
@@ -57,9 +73,28 @@ h1 {
 	height: 100%;
 }
 
-.margin-top-30{
-	margin-top: 30%;
+/* Margin deifinitions*/
+.margin-top-5 {
+	margin-top: 2.5rem;
 }
+
+.margin-bottom-5 {
+	margin-bottom: 2.5rem;
+}
+
+.margin-top-10 {
+	margin-top: 5rem;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 5rem;
+}
+
+.margin-top-30 {
+	margin-top: 15rem;
+}
+
+
 
 .align-right {
 	display: flex;
@@ -75,4 +110,8 @@ h1 {
 .logo-size {
 	max-width: 100px;
 	margin-bottom: 10%;
+}
+
+.white-box {
+	background: #fff;
 }

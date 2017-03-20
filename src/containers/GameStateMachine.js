@@ -7,7 +7,7 @@ import {	WelcomeScreen,
 
 export default React.createClass({
 	getInitialState(){
-		return { game: 'welcome' }
+		return { game: 'instructions' }
 	},
 	gameScene: null,
 	numContainers: 9,
