@@ -38,9 +38,10 @@ class InstructionsScreen extends Component {
 				<Row className="show-grid  margin-top-10">
 					<Col xs={1} md={3} />
 					<Col xs={10} md={6} className="white-box">
-						<h2>Instructions</h2>
+						<h2>Como jogar</h2>
 						<p>
-							You have to click on the containers and try to bring them down
+							Containers docker no Kubernetes são rápidos, mas será que você consegue ser mais rápido ainda?
+							Clique nos containers docker para derrubá-los antes deles se tornarem responsivos novamente
 						</p>
 						<Button bsStyle="primary"
 							onClick={this.props.onClick} className="margin-bottom-10">Play</Button>
@@ -74,7 +75,7 @@ class GameWonScreen extends Component {
 							<Col xs={12} md={12}>
 								<PageHeader className="no-border-bottom 
 									no-margin-bottom animated tada">
-									You won</PageHeader>
+									Você ganhou!!</PageHeader>
 							</Col>
 						</Row>
 						<Row>
@@ -85,7 +86,7 @@ class GameWonScreen extends Component {
 						</Row>
 						<Row>
 							<Col xs={12} md={12}>
-								<Button bsStyle="primary" onClick={this.props.onClick}>Play Again</Button>
+								<Button bsStyle="primary" onClick={this.props.onClick}>Jogue novamente</Button>
 							</Col>
 						</Row>
 						<Row>
