@@ -117,10 +117,18 @@ h2 {
 	justify-content: center;
 }
 
-.container {
-	display: table-cell;
-	vertical-align: middle;
+@media screen 
+  and (min-device-width: 1200px) { 
+  	.container {
+		padding-right: 15px;
+	    padding-left: 15px;
+	    margin-right: auto;
+	    margin-left: auto;
+		display: table-cell;
+		vertical-align: middle;
+	}
 }
+
 
 
 .footer-position {
