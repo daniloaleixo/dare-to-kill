@@ -1,29 +1,25 @@
-import React from 'react'
-import logo from '../img/logo-getup.png'
-import './Game.css';
-import GameStateMachine from '../containers/GameStateMachine'
-import '../animate.css'
+import React from "react"
+import logo from "../img/logo-getup.png"
+import "./Game.css";
+import "../animate.css"
+import GameStateMachine from "../containers/GameStateMachine"
+import {Image} from "react-bootstrap"
 
+const getupLogo = (
+  <Image src={logo} responsive alt="logo getup cloud"/>
+);
 
 export default React.createClass({
 	render(){
 		return (
 			<div>
-				<div className='bgImage'>
-					<div className='title-box'>
-						<h1 className='animated tada'>I Dare you to kill my app</h1>
+				<div className="bgImage">
+					<div className="title-box">
 						<GameStateMachine/>
 					</div>
-					<div className='logoFooter'>
-						<a href='https://getupcloud.com/'>
-							<img src={logo} alt='Logo' className='img-logo'/>
-						</a>
-					</div>
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-					<br/>
+					<a href="https://getupcloud.com/">
+						{getupLogo}
+					</a>
 				</div>
 			</div>
 			)

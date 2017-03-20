@@ -1,17 +1,27 @@
 import React, { Component } from 'react'
 import HandlingContainersObjects from '../containers/HandlingContainersObjects'
+import {PageHeader, Button} from 'react-bootstrap'
 import '../animate.css'
 import './GameScenes.css'
 import playingGif from '../img/playing.gif'
 
 class WelcomeScreen extends Component {
+	constructor(...args){
+		super(...args);
+		this.state= {}
+	}
+
 	render(){
 		return (
-			<div className='animated fadeIn'>
-				<button style={{marginTop: '3em'}}
-				onClick={this.props.onClick}>
-					Start Game
-				</button>
+			<div>
+				<PageHeader>I Dare you to kill my app</PageHeader>
+				<div>
+					<Button
+					        bsStyle="primary"
+					        onClick={this.props.onClick}>
+					        Start Game
+					</Button>
+				</div>
 			</div>
 		)
 	}
