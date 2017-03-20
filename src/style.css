@@ -1,36 +1,8 @@
-.background-image {
-	background-image: url('../img/imgHeaderVerde-1-1920x893_2.png');
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-size: cover;;
-	background-repeat: no-repeat;
-	background-position: bottom;
+body {
+
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.title-box {
-	margin: auto;
-	padding-top: 2em;
-	text-align: center;
-}
-
-/*h1 {
+h1 {
 	color: white;
 	font-family: Nunito, Verdana;
 	font-weight: 300;
@@ -42,30 +14,9 @@
 	margin-bottom: 1em;
 	margin-left: 0.5em;
 	margin-right: 0.5em;
-}*
-
-h2 {
-	color: white;
-	font-family: Nunito, Verdana;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 22px;
-	line-height: 28px;
-	opacity: 0.9;
 }
 
-h3 {
-	color: white;
-	font-family: Nunito, Verdana;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 18px;
-	line-height: 28px;
-	opacity: 0.9;
-	text-transform: none !important;
-}
-
-button {
+.btn-primary {
 	background-color: #ff4c4d;
 	color: #ffffff;
 	padding-top: 1.818em;
@@ -79,11 +30,9 @@ button {
 	vertical-align: middle;
 	line-height: 100%;
 	border-radius: 50px;
-	font-family: Nunito, Verdana;
 	font-size: 13px;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
-	bottom: 10%;
 	-webkit-transition : color .3s ease, background-color .3s ease, border-color .3s ease;
 	-moz-transition    : color .3s ease, background-color .3s ease, border-color .3s ease;
 	-o-transition      : color .3s ease, background-color .3s ease, border-color .3s ease;
@@ -91,26 +40,39 @@ button {
 	transition         : color .3s ease, background-color .3s ease, border-color .3s ease;
 }
 
-button:hover {
-	background: #3071A9
+.btn-primary:hover {
+	background: #3071A9;
+	border-color: transparent;
+}
+.btn-primary:active{
+	background: #3071A9;
+	border-color: transparent;
+}
+
+.no-border-bottom {
+	border-bottom: transparent !important;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.margin-top-30{
+	margin-top: 30%;
+}
+
+.align-right {
+	display: flex;
+	justify-content: flex-end;
 }
 
 
-.logoFooter {
-	position: fixed;
-	width: 100%;
-	height: 15em;
-	background-color: #ffffff;
-	max-height: 40px;
-	bottom: 0%;
-	right: 0%;
-	justify-content:center;
-}
-
-.logoFooter .img-logo {
+.footer-position {
 	position: absolute;
-	max-height: 30px;
-	bottom: 2%;
-	right: 1%
+	bottom: 0%;
 }
-*/
+
+.logo-size {
+	max-width: 100px;
+	margin-bottom: 10%;
+}

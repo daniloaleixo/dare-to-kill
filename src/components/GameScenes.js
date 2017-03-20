@@ -13,16 +13,20 @@ class WelcomeScreen extends Component {
 
 	render(){
 		return (
-			<div>
-				<PageHeader>I Dare you to kill my app</PageHeader>
-				<div>
-					<Button
+			<Grid>
+				<Row className="show-grid margin-top-30">
+					<Col xs={1} md={3} />
+					<Col xs={10} md={6}>
+						<PageHeader className="no-border-bottom">I Dare you to kill my app</PageHeader>
+						<Button
 					        bsStyle="primary"
 					        onClick={this.props.onClick}>
-					        Start Game
+					        Iniciar
 					</Button>
-				</div>
-			</div>
+					</Col>
+					<Col xs={1} md={3} />
+				</Row>
+			</Grid>
 		)
 	}
 }

@@ -3,25 +3,31 @@ import logo from "../img/logo-getup.png"
 import "./Game.css";
 import "../animate.css"
 import GameStateMachine from "../containers/GameStateMachine"
-import {Image} from "react-bootstrap"
+import {Image, Grid, Row, Col} from "react-bootstrap"
 
 const getupLogo = (
-  <Image src={logo} responsive alt="logo getup cloud"/>
+  <Image src={logo} responsive alt="logo getup cloud" className="logo-size"/>
 );
 
 export default React.createClass({
 	render(){
 		return (
-			<div>
-				<div className="bgImage">
-					<div className="title-box">
+			<Grid className="background-image">
+				<Row className="show-grid full-height">
+					<Col xs={1} md={3} />
+					<Col xs={10} md={6}>
 						<GameStateMachine/>
-					</div>
-					<a href="https://getupcloud.com/">
-						{getupLogo}
-					</a>
-				</div>
-			</div>
+					</Col>
+					<Col xs={1} md={3} />
+				</Row>
+				<Row className="show-grid">
+					<Col xs={12} md={12} className="align-right footer-position">
+						<a href="https://getupcloud.com/">
+							{getupLogo}
+						</a>
+					</Col>
+				</Row>
+			</Grid>
 			)
 	}
 
