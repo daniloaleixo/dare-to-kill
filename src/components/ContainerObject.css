@@ -4,16 +4,20 @@
 	height: 3em;
 	float: left;
 	clear: none;
-	margin: 1%;
-	background: red;
+	margin: 5%;
 }
 
-.containerImg {	
-	width: 3em;
-	height: 3em;
-	float: left;
-	clear: none;
-	margin: 1%;
+.statusStyle {
+  position: absolute;
+  bottom: 0%;
+}
+
+.brightness-50 {
+  filter: brightness(50%);
+}
+
+.brightness-100 {
+  filter: brightness(100%);
 }
 
 @-webkit-keyframes shakeUpAndDown {

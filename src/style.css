@@ -117,6 +117,7 @@ h2 {
 	justify-content: center;
 }
 
+/* The larger pages was not being centralized*/
 @media screen 
   and (min-device-width: 1200px) { 
   	.container {

@@ -20,7 +20,7 @@ export default React.createClass({
 							<Col xs={12} md={12} style={style}>
 
 								{
-									this.props.containersState.slice(0,this.props.numContainers/2)
+									this.props.containersState.slice(0,this.props.numContainers/2 + 1)
 									.map( (containerState) => {
 									return (
 										<ContainerObject 
@@ -35,7 +35,7 @@ export default React.createClass({
 						<Row>
 							<Col xs={12} md={12}  style={style}>
 								{
-									this.props.containersState.slice(this.props.numContainers/2,this.props.numContainers)
+									this.props.containersState.slice(this.props.numContainers/2 + 1,this.props.numContainers)
 									.map( (containerState) => {
 									return (
 										<ContainerObject 

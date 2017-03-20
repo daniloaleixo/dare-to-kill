@@ -1,9 +1,11 @@
 import React from 'react'
 import './ContainerObject.css'
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import happy from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_happy2.png'
-import sad from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
-import blocked from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
+import container from '../img/icone-pod-lg.svg'
+// import sad from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_sad3.png'
+// import blocked from '../img/main-qimg-fa13beb8faa5b5ad2b5534932f5c1f7f_blocked2.png'
+import dead from '../img/icone-pod-pausado.svg'
+import alive from '../img/icone-status-pod.svg'
 import '../animate.css'
 import {Image} from 'react-bootstrap'
 
@@ -15,6 +17,7 @@ const containerImageStyle = {
 	clear: 'none',
 	margin: '1%'
 };
+
 
 export default React.createClass({
 	
@@ -28,22 +31,39 @@ export default React.createClass({
 	},
 
 	render() {
-		let srcImg = ''
+		let statusImg = ''
 		let imgAnimation = ''
+		let brightnessClass = ''
 
 		switch(this.props.stateName){
-			case 'down': srcImg = blocked; imgAnimation = 'animated fadeInDown'; break;
-			case 'up': srcImg = happy; imgAnimation = 'shakeUpAndDown'; break;
-			case 'clicked': srcImg = sad; imgAnimation = 'animated fadeOutDown'; break;
-			default: srcImg = blocked
+			case 'down': 
+				imgAnimation = 'animated fadeInDown brightness-50'; 
+				statusImg = alive;
+				break;
+			case 'up': 
+				imgAnimation = 'shakeUpAndDown brightness-100'; 
+				statusImg = alive;
+				break;
+			case 'clicked': 
+				imgAnimation = 'animated fadeOutDown brightness-50'; 
+				statusImg = dead;
+				break;
+			default: 
+				console.log("default")
 		}
 		return (
-			<Image src={srcImg} 
-					responsive 
-					alt="Container Image"
-					style={containerImageStyle} 
-					className={imgAnimation}
-					onClick={this.handleClick}/>
+			<div className={imgAnimation} onClick={this.handleClick}>
+				<Image src={container} 
+						responsive 
+						className="containerStyle"
+						alt="Container Image"
+						/>
+				<Image 	src={statusImg} 
+						responsive 
+						className="statusStyle"
+						// style={statusStyle} 
+						alt="Container Image"/>
+			</div>
 			)
 	}
 })
