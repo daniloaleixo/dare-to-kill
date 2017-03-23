@@ -1,10 +1,10 @@
-# I Dare You To Kill My App #
+# I Dare You To Kill My App 
 
 ## Introdução 
 
 Containers docker no Kubernetes são rápidos, mas será que você consegue ser mais rápido ainda?
 
-## Instalando Requisitos ## 
+## Instalando Requisitos
 * NodeJS
 	```sh
 	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -16,7 +16,7 @@ Containers docker no Kubernetes são rápidos, mas será que você consegue ser 
 	npm install
 	```
 
-## Rodando o sistema ##
+## Rodando o sistema
 
 É possível rodar o sistema em dois ambientes : 
 
